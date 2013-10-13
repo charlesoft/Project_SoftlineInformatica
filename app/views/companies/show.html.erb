@@ -1,0 +1,25 @@
+<div id="notice"><%= notice %></div>
+
+
+<h1>A Empresa</h1>
+</br>
+<div class="alert alert-success">
+	<h3><%= @company.title %></h3>
+	<p><%= @company.description %></p>
+</div>
+<% if user_signed_in? %>
+<%= link_to "Editar", edit_company_path(@company), :class => "btn btn-large" %>
+<%= link_to "Voltar", companies_path, :class => "btn" %>
+<% end %>
+<%
+if user_signed_in? %>
+<div id="nova_solucao">
+	<%=render :partial => 'soluctions/form', :locals =>{:soluction => Soluction.new, :company => @company} %>
+</div>
+<% end %>
+
+<div id="lista_solucao">
+	<%= render :partial => 'soluctions/index', :locals => {:soluctions => @company.soluctions} %>
+</div>
+
+

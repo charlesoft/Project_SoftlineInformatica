@@ -1,0 +1,19 @@
+<h4>Nova Solução</h4>
+
+<%= form_for([company, soluction], :remote => true) do |f|%>
+
+<%= f.hidden_field :company_id, :value => company.id %>
+
+<%= f.label :title, "Título" %>
+<%= f.text_field :title %>
+
+<%= f.label :description, "Descrição" %>
+<%= f.text_area :description, :class => "span7" %>
+
+<div class="actions">
+	<%= f.submit "Salvar", :class => "btn btn-primary" %>
+
+</div>
+
+
+<% end %>

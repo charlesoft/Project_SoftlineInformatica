@@ -1,0 +1,22 @@
+<% if @users.any? %>
+<h2>Usuários</h2>
+<table class="table-table-scriped">
+	<% @users.each do |user| %>
+	<tr>
+		<td>
+			<%= link_to "#{user.email}", user %>
+			<%= link_to "<i class='icon-edit'></i>".html_safe, edit_user_path(user), :class => "btn btn-mini" %>
+			<%= link_to "<i class='icon-trash'></i>".html_safe, user, :method => :delete, :class => "btn btn mini" %>
+		</td>	
+	</tr>
+	
+	<% end %>
+</table>
+
+<% else %>
+<div class="alert">
+	Nenhum usuário cadastrado
+</div>
+<% end %>
+
+<%=link_to "Novo Usuário", new_user_path, :class => "btn btn-primary" %>

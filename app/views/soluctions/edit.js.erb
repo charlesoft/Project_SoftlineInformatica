@@ -1,0 +1,2 @@
+$("#nova_solucao").html("<%= j render :partial => 'soluctions/form', :locals => {:soluction => @soluction, :company => @soluction.company} %>");
+$("html, body").animate({scrolltop:$("#nova_solucao").offset().top});

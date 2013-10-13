@@ -1,0 +1,61 @@
+
+<h3>Contato</h3>
+
+<%= form_for(@contact) do |f| %>
+
+<div class="field">
+	<%= f.label :name, "Nome"%>
+	<%= f.text_field :name %>
+</div>
+
+<div class="field">
+	<%= f.label :function, "Cargo"%>
+	<%= f.text_field :function %>
+</div>
+
+<div class="field">
+	<%= f.label :state, "Estado" %>
+	<%= select :state, :state_id, State.all.collect { |s| [s.name, s.id] }, {include_blank: true}%>
+</div>
+
+<div class="field">
+	<%=f.label :city, "Cidades" %>
+	<div id="box-city">
+	<select></select>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$('select').on('change', function (e) {
+		var optionSelected = $("option:selected", this);
+		var valueSelected = this.value;
+		$.get(
+			"/contacts/get_cities/" + valueSelected 
+			);
+	});		
+});	
+
+</script>
+
+
+<div class="field">
+	<%= f.label :phone_number, "Telefone" %>
+	<%= f.telephone_field :phone_number %>
+</div>
+
+<div class="field">
+	<%= f.label :email, "E-mail"%>
+	<%= f.email_field :email %>
+</div>
+
+<div class="field">
+	<%= f.label :menssage, "Mensagem" %>
+	<%= f.text_area :menssage, :class => "span7" %>
+</div>
+
+<div class="action">
+	<%= f.submit "Enviar", :class => "btn btn-primary" %>
+	<%= link_to "Voltar", :class => "btn btn-info" %>
+</div>
+<% end %>

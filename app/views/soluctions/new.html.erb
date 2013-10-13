@@ -1,0 +1,18 @@
+<h4>Nova Solução</h4>
+
+<%=form_tag(create_soluction_path) do %>
+
+<%= label_tag :company_id, "Des. Empresa" %>
+<%= select_tag :company_id, options_from_collection_for_select(@companies, :id, :title, @soluction.company_id) %>
+
+<%= label_tag :title, "Título" %>
+<%= text_field_tag :title, @soluction.title %>
+
+<%= label_tag :description, "Descrição" %>
+<%= text_area_tag :description, @soluction.description, :rows => 10,:class => "span7" %>
+
+ 
+<div class="actions">
+	<%= submit_tag "Salvar", :class => "btn btn-primary" %>
+</div>
+<% end %>

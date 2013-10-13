@@ -1,0 +1,45 @@
+<%= form_for(user) do |f|%>
+
+<div class="field">
+	<%= f.label :name %>
+	<%= f.text_field :name%>
+
+</div>
+
+<div class="field">
+	<%= f.label 'Sobrenome', :last_name %>
+	<%= f.text_field :last_name %>
+
+</div>
+
+<div class="field">
+	<%= f.label "CPF", :cpf %>
+	<%= f.text_field :cpf %>
+
+</div>
+
+<div class="field">
+	<%= f.label "E-mail", :email %>
+	<%= f.text_field :email %>
+
+</div>
+
+<div class="field">
+	<%= f.label "Data", :dat %>
+	<%= f.date_select :dat %>
+
+</div>
+
+<div class="field">
+	<p>(1): masculino - (2): feminimo<p>
+	<%= f.label "Sexo", :gender %>
+	<%= f.number_field :gender %>
+
+</div>
+
+<div class="actions">
+	<%= f.submit :class => "btn btn-primary" %>
+	<%= link_to "Voltar", users_path, :class => "btn" %>
+</div>
+
+<% end %>

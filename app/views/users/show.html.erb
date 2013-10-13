@@ -1,0 +1,15 @@
+<div id="notice"><%= notice %></div>
+
+<h4>Usuário</h4>
+
+<p><b>Nome:<b><%= @user.name %></b></p>
+<p><b>Sobrenome:<b><%= @user.last_name%></b></p>
+<p><b>CPF:<b><%= @user.cpf%></b></p>
+<p><b>E-mail:<b><%= @user.email%></b></p>
+<p><b>Data:<b><%= @user.dat%></b></p>
+<p><b>Sexo:<b><%= @user.gender %></b></p>
+
+<div>
+	<%= link_to 'Editar', edit_user_path(@user), :class => "btn btn-primary" %>
+	<%= link_to 'Voltar', users_path, :class => "btn"%>
+</div>

@@ -1,0 +1,23 @@
+<h4>Contatos</h4>
+<% if @contacts.any? %>
+<% @contacts.each do |contact| %>
+<table class="table table-bordered">
+	<tr>
+		<td>
+			<h3><%= contacts.name %></h3>
+			<p><b>Cargo:<b><%= contact.function %></b></p>
+			<p><b>Estado:<b><%= contact.state %></b></p>
+			<p><b>Cidade:<b><%= contact.cidade %></b></p>
+			<p><b>Telefone:<b><%= contact.phone_number %></b></p>
+			<p><b>Empresa:<b><%= contact.company %></b></p>
+			<p><b>E-mail:<b><%= contact.email %></b></p>
+			<p><b>Mensagem:<b><%= contact.mensage %></b></p>
+		</td>
+	</tr>
+</table>
+<% end %>
+<% else %>
+<div class="alert">
+	Nenhum contato cadastrado!
+</div>
+<% end %>

@@ -1,0 +1,7 @@
+<% if @soluction.persisted? %>
+$("#lista_solucao").html("<%= j render :partial => 'soluctions/index', :locals =>{:soluctions => @soluction.company.soluctions} %>");
+$("#notice").prepend("<%= j notice %>");
+$("#nova_solucao").html("<%= j render :partial => 'soluctions/form', :locals =>{:soluction => Soluction.new, :company => @soluction.company} %>");
+<% else %>
+$("#nova_solucao").html("<%= j render :partial => 'soluctions/form', :locals => {:soluction => Soluction.new, :company => @soluction.company} %>");
+<% end %>

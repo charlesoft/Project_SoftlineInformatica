@@ -1,0 +1,23 @@
+<% if @companies.any? %>
+<table class="table">
+	<tr>
+		<td>
+			<div class="hero-unit">
+				<% @companies.each do |company| %>
+				<h1><%= company.title %></h1>
+				<p class="lead"><%= company.description %></p>
+				<% if user_signed_in? %>
+				<%=link_to 'Deletar' ,company, :method => :delete, :confirm => 'Deseja excluir?', :class => 'btn btn-inverse' %>
+				<% end %>	
+				<%= link_to "Soluções", company, :class =>"btn btn-primary" %>	
+				<% end %>
+
+				<% else %>
+				<div class="alert">
+					Nenhuma descrição sobre a empresa 
+				</div>
+				<% end %>
+			</div>
+		</td>
+	</tr>
+</table>

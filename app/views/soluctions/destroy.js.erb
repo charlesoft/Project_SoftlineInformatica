@@ -1,0 +1,5 @@
+<% if @soluction.destroyed? %>
+$("#solucao_<%= @soluction.id %>").remove();
+<% else %>
+$("#notice").prepend("<%= j notice %>");
+<% end %>

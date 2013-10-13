@@ -1,0 +1,18 @@
+<%= form_for(company) do |f|%>
+
+<div class="field">
+	<%= f.label :title, "Título" %>
+	<%= f.text_field :title %>
+</div>
+
+<div class="field">
+	<%= f.label :description, "Descrição" %>
+	<%= f.text_area :description, :class => "span7" %>
+</div>
+
+<div class="action">
+	<%= f.submit "Salvar", :class => "btn btn-primary" %>
+	<%= link_to "Voltar", root_path, :class => "btn" %>
+</div>
+
+<% end %>

@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: development_softline
+  pool: 5
+  username: charles
+  password: 123
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: test_softline
+  pool: 5
+  username: charles
+  password: 123
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: production_softline
+  pool: 5
+  username: charles
+  password: 123
