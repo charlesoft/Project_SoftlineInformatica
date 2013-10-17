@@ -12,5 +12,6 @@ class Contact < ActiveRecord::Base
 	validates :company, :presence => true, :allow_blank => false
 	validates :email, :presence => true, :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create}
 	validates :menssage, :presence => true, :allow_blank => false
+
 	
 end

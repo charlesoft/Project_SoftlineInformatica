@@ -9,4 +9,5 @@ class City < ActiveRecord::Base
 
 	#Associations
 	belongs_to :state
+
 end

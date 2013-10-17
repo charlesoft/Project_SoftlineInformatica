@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
 
-	before_filter :authenticate_user!, :except => [:new, :create, :get_cities]
+	before_filter :authenticate_user!, :except => [:new, :create, :get_states]
 
 	def index
 		@contacts = Contact.all
@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
 		@contact = Contact.find(params[:id])
 	end
 
-	def get_cities
+	def get_states
 		@state = State.find(params[:id])
 	end
 end

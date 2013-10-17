@@ -74,7 +74,7 @@
   match 'index_soluctions' => 'soluctions#index_soluctions', :via => :get, :as => :index_soluctions
   match 'new_contact' => 'contacts#new', :via => :get, :as => :new_contact
   match 'index_contacts' => 'contacts#index', :via => :get, :as => :contacts
-  match 'contacts/get_cities/:id' => 'contacts#get_cities'
+  match 'contacts/get_states/:id' => 'contacts#get_states'
 
   # See how all your routes lay out with "rake routes"
 

@@ -7,5 +7,5 @@ class State < ActiveRecord::Base
   validates :uf, :presence => true
 
   #Associations
-  has_many :cities
+  has_many :cities, :order => 'name'
 end
