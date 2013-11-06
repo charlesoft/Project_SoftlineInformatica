@@ -1,16 +1,40 @@
+ <!-- /.header -->
+        <section class="page-title-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 page-title">
+                        <h4>Services</h4>
+                    </div>
+                    <!-- /.page-title -->
+                    <div class="col-xs-6 hidden-xs breadcrumb-wrapper">
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li class="active">Services</li>
+                        </ol>
+                    </div>
+                    <!-- /.breadcrumb-wrapper -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+
 <% if @soluctions.any? %>
 <% @soluctions.each do |soluction| %>
-<table class="table table-bordered">
-	<tr>
-		<td>
-			<h3><%= soluction.title %></h3>
-			<p><%= soluction.description %></p>
-		</td>
-	</tr>
-</table>
-<% end %>
-<% else %>
-<div class="alert">
-	Não há soluções cadastradas!
+<div class="col-md-6 wrapper-1">
+	<table class="table table-bordered">
+		<tr>
+			<td>
+				<h3><%= soluction.title %></h3>
+				<p><%= soluction.description %></p>
+			</td>
+		</tr>
+	</table>
+	<% end %>
+	<% else %>
+	<div class="alert">
+		Não há soluções cadastradas!
+	</div>
 </div>
 <% end %>

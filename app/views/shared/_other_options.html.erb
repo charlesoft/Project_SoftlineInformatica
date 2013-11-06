@@ -1,32 +1,35 @@
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
+<section class="our-services">
     <div class="container">
-      <hr>
-      <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row-fluid">
-          <div class="span4">
-            <img class="img-circle" data-src="holder.js/140x140">
-            <h2>A Empresa</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-            <p><%= link_to "Ver mais", companies_path, :class => "btn btn-success" %></p>
-          </div><!-- /.span4 -->
-          <div class="span4">
-            <img class="img-circle" data-src="holder.js/140x140">
-            <h2>Serviços</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><%= link_to "Ver mais", index_soluctions_path, :class => "btn btn-success" %></p>
-          </div><!-- /.span4 -->
-          <div class="span4">
-            <img class="img-circle" data-src="holder.js/140x140">
-            <h2>Contato</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><%= link_to "Ver mais", new_contact_path, :class => "btn btn-success" %></p>
-          </div><!-- /.span4 -->
-        </div><!-- /.row -->
-      </div>
-      <hr>
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="service">
+                    <span class="service-icon">
+                        <%=fa_icon "laptop" %>
+                    </span>
+                    <h4>A Empresa</h4>
+                    <p>Donec in velit vel ipsum auctor pulvinar. Vesti bulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod auctor pulvinar.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <span class="service-icon">
+                        <%=fa_icon "gear" %>
+                    </span>
+                    <h4>Serviços</h4>
+                    <p>Donec in velit vel ipsum auctor pulvinar. Vesti bulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod auctor pulvinar.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <span class="service-icon">
+                        <%=fa_icon "envelope-o" %>
+                    </span>
+                    <h4>Fale Conosco</h4>
+                    <p>Donec in velit vel ipsum auctor pulvinar. Vesti bulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod auctor pulvinar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+</hr>

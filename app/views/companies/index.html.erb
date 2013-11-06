@@ -1,8 +1,59 @@
-<% if @companies.any? %>
-<table class="table">
-	<tr>
-		<td>
-			<div class="hero-unit">
+ 
+ <!-- /.header -->
+        <section class="page-title-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 page-title">
+                        <h4>Services</h4>
+                    </div>
+                    <!-- /.page-title -->
+                    <div class="col-xs-6 hidden-xs breadcrumb-wrapper">
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li class="active">Services</li>
+                        </ol>
+                    </div>
+                    <!-- /.breadcrumb-wrapper -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+<section class="colored-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 wrapper-1">
+				<div id="carousel-example-generic" class="carousel slide">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="assets/img/carousel/photo (1).jpg" class="img-responsive" alt="Carousel Image">
+						</div>
+						<div class="item">
+							<img src="assets/img/carousel/photo (2).jpg" class="img-responsive" alt="Carousel Image">
+						</div>
+						<div class="item">
+							<img src="assets/img/carousel/photo (3).jpg" class="img-responsive" alt="Carousel Image">
+						</div>
+					</div>
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+			</div>
+			<% if @companies.any? %>
+			<div class="col-md-6 wrapper-1">
 				<% @companies.each do |company| %>
 				<h1><%= company.title %></h1>
 				<p class="lead"><%= company.description %></p>
@@ -18,6 +69,7 @@
 				</div>
 				<% end %>
 			</div>
-		</td>
-	</tr>
-</table>
+		</div>
+	</div>
+	<!-- /.container -->
+</section>
