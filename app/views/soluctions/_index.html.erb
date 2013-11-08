@@ -1,21 +1,18 @@
-<hr>
-
-<h3>Soluções</h3>
 
 <% if soluctions.any? %>
 <% soluctions.each do |s| %>
 <table class="table table-bordered">
 	<tr>
 		<td>
-		<div id='solucao_<%= s.id %>'>
-			<h2><%= s.title %></h2>
-			<p><%= s.description %></p>
-			<% if user_signed_in? %>
-			<%= link_to "Editar", edit_company_soluction_path(s.company, s), :class => "btn btn-warning", :remote => true %> 
-			<%= link_to "Excluir", [s.company, s], :method => :delete, :class => "btn btn-inverse", :remote => true, :confirm => "Deseja excluir esse registro?" %>
-			<% end %>
-		</div>
-	</td>
+			<div id='solucao_<%= s.id %>'>
+				<h2><%= s.title %></h2>
+				<p><%= s.description %></p>
+				<% if user_signed_in? %>
+				<%= link_to "Editar", edit_company_soluction_path(s.company, s), :class => "btn btn-warning", :remote => true %> 
+				<%= link_to "Excluir", [s.company, s], :method => :delete, :class => "btn btn-inverse", :remote => true, :confirm => "Deseja excluir esse registro?" %>
+				<% end %>
+			</div>
+		</td>
 	</tr>
 </table>
 
