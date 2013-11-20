@@ -15,22 +15,29 @@
 		<%= render :partial => 'shared/menu_top'%>
 		
 
-			<%= yield %>
+     <%= yield %>
 
 
-		</div>
+ </div>
 
-		<div>
-			<%= render :partial => 'shared/other_options' %>
-			<%= render :partial => 'shared/footer' %>
-		</div>
-	</div>
+ <div>
+     <%= render :partial => 'shared/other_options' %>
+     <%= render :partial => 'shared/footer' %>
+ </div>
 
 
-	<script type="text/javascript">
-	var tpj = jQuery;
-	tpj.noConflict();
-	tpj(document).ready(function () {
+</div>
+
+ <a href="#" id="toTop" style="display: inline;">
+    <span id="toTopHover" style="opacity: 0;"></span>
+    "To Top"
+</a>
+
+
+<script type="text/javascript">
+var tpj = jQuery;
+tpj.noConflict();
+tpj(document).ready(function () {
                 // Revolution Slider
                 if (tpj.fn.cssOriginal != undefined)
                 	tpj.fn.css = tpj.fn.cssOriginal;

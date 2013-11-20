@@ -1,40 +1,42 @@
-
-        <section class="page-title-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 page-title">
-                        <h4>Serviços</h4>
-                    </div>
-                    <!-- /.page-title -->
-                    <div class="col-xs-6 hidden-xs breadcrumb-wrapper">
-                        <ol class="breadcrumb pull-right">
-                            <li><%=link_to "Home", root_path %>/li>
-                            <li><%=link_to "A Empresa", companies_path%></li>
-                            <li class="active">Services</li>
-                        </ol>
-                    </div>
-                    <!-- /.breadcrumb-wrapper -->
-                </div>
-                <!-- /.row -->
+<!-- /.header -->
+<section class="page-title-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 page-title">
+                <h4>Serviços</h4>
             </div>
-            <!-- /.container -->
-        </section>
+            <!-- /.page-title -->
+            <div class="col-xs-6 hidden-xs breadcrumb-wrapper">
+                <ol class="breadcrumb pull-right">
+                    <li><%=link_to "Home", root_path %></li>
+                    <li><%=link_to "A Empresa", companies_path %></li>
+                    <li class="active">Serviços</li>
+                </ol>
+            </div>
+            <!-- /.breadcrumb-wrapper -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
 
-<% if @soluctions.any? %>
-<% @soluctions.each do |soluction| %>
-<div class="col-md-6 wrapper-1">
-	<table class="table table-bordered">
-		<tr>
-			<td>
-				<h3><%= soluction.title %></h3>
-				<p><%= soluction.description %></p>
-			</td>
-		</tr>
-	</table>
-	<% end %>
-	<% else %>
-	<div class="alert">
-		Não há soluções cadastradas!
-	</div>
+
+    <div class="container">
+        <hr>
+        <% if @soluctions.any? %>
+        <% @soluctions.each do |soluction| %>
+           <table class="table table-bordered">
+              <tr>
+                 <td>
+                    <h3><%= soluction.title %></h3>
+                    <p><%= soluction.description %></p>
+                </td>
+            </tr>
+        </table>
+        <% end %>
+        <% else %>
+        <div class="alert">
+          Não há soluções cadastradas!
+      </div>
+    <% end %>
 </div>
-<% end %>
