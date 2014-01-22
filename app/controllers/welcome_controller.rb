@@ -11,6 +11,4 @@ class WelcomeController < ApplicationController
 	def test
 		redirect_to new_user_session_path
 	end
-
-
 end

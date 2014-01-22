@@ -47,6 +47,8 @@ gem 'devise'
 
 gem 'mailcatcher'
 
+gem 'mask_validator', '0.2.1'
+
 #option
 #gem 'brazilian-rails'
 

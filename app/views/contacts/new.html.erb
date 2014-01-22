@@ -1,85 +1,72 @@
 
-<section class="contact-us">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 wrapper-2">
-				<h5 class="subpage-title"><i class="icon-compass"></i> Visit Us</h5>
-				<address>
-					<strong>FLATPOINT, INC.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-				</address>
-				<h5 class="subpage-title"><i class="icon-phone"></i> Contact</h5>
-				<address>
-					Phone: (123) 456-7890<br>
-					Fax: (123) 456-7890<br>
-					<a href="mailto:#">contact@example.com</a>
-				</address>
-			</div>
-		</section>
-	
-		<div class="container">
 
-			<h3>Contato</h3>
+<div class="container">
 
-			<%= form_for(@contact) do |f| %>
+<div id="notice"><%=notice %></div>
 
-			<div class>
-				<%= f.label :name, "Nome"%>
-				<%= f.text_field :name, :class =>"form-control" %>
-			</div>
+	<h3>Contato</h3>
 
-			<div class="field">
-				<%= f.label :function, "Cargo"%>
-				<%= f.text_field :function %>
-			</div>
+	<%= form_for(@contact) do |f| %>
 
-			<div class="field">
-				<%= f.label :state, "Estado" %>
-				<%= select :state, :state_id, State.all.collect { |s| [s.name, s.id] }, {include_blank: true}, :class => "form-control"%>
-			</div>
+	<div class="field">
+		<%= f.label :name, "Nome"%>
+		<%= f.text_field :name, :class => "form-control"%>
+	</div>
 
-			<div class="field">
-				<%=f.label :city, "Cidades" %>
-				<div id="box-city">
-					<select></select>
-				</div>
-			</div>
+	<div class="field">
+		<%= f.label :function, "Cargo"%>
+		<%= f.text_field :function, :class => "form-control" %>
+	</div>
 
-			<script type="text/javascript">
-			$(function(){
-				$('select').on('change', function (e) {
-					var optionSelected = $("option:selected", this);
-					var valueSelected = this.value;
-					$.get(
-						"/contacts/get_states/" + valueSelected 
-						);
-				});		
-			});	
+	<div class="field">
+		<%= f.label :state, "Estado" %>
+		<%= select :state, :state_id, State.all.collect { |s| [s.name, s.id] }, {include_blank: true}, :class => "form-control"%>
+	</div>
 
-			</script>
-
-
-			<div class="field">
-				<%= f.label :phone_number, "Telefone" %>
-				<%= f.telephone_field :phone_number %>
-			</div>
-
-			<div class="field">
-				<%= f.label :email, "E-mail"%>
-				<%= f.email_field :email %>
-			</div>
-
-			<div class="field">
-				<%= f.label :menssage, "Mensagem" %>
-				<%= f.text_area :menssage, :class => "span7" %>
-			</div>
-
-			<div class="action">
-				<%= f.submit "Enviar", :class => "btn btn-primary" %>
-				<%= link_to "Voltar", :class => "btn btn-info" %>
-			</div>
-			<% end %>
+	<div class="field">
+		<%=f.label :city, "Cidades" %>
+		<div id="box-city">
+			<select class="form-control"></select>
 		</div>
+	</div>
 
-		
+	<script type="text/javascript">
+	$(function(){
+		$('select').on('change', function (e) {
+			var optionSelected = $("option:selected", this);
+			var valueSelected = this.value;
+			$.get(
+				"/contacts/get_states/" + valueSelected 
+				);
+		});		
+	});	
+
+	</script>
+
+
+	<div class="field">
+		<%= f.label :phone_number, "Telefone" %>
+		<%= f.telephone_field :phone_number, :class => "form-control" %>
+	</div>
+
+
+</script>
+
+<div class="field">
+	<%= f.label :email, "E-mail"%>
+	<%= f.email_field :email, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :menssage, "Mensagem" %>
+	<%= f.text_area :menssage, :class => "form-control", :rows => 10%>
+</div>
+
+</br>
+<div class="actions">
+	<%= f.submit "Enviar", :class => "btn btn-primary" %>
+	<%= link_to "Voltar", :class => "btn" %>
+</div>
+<% end %>
+</div>
+

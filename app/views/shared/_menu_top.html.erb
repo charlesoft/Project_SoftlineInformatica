@@ -18,39 +18,15 @@
                             <li class="active"><%=link_to "Home", root_path %></li>
                             <li class="dropdown">
                               <%=link_to "A Empresa", companies_path, :class => "dropdown-toggle" %>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">UI Elements</a></li>
-                                    <li><a href="#">Buttons</a></li>
-                                    <li><a href="#">Icons</a></li>
-                                    <li><a href="#">Pricing Tables</a></li>
-                                </ul>
                             </li>
                             <li class="dropdown">
                                   <%=link_to "Serviços", index_soluctions_path, :class => "dropdown-toggle" %>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                    <li><a href="#">404 Not Found</a></li>
-                                </ul>
                             </li>
                             <li class="dropdown">
-                                <%=link_to "Contato", new_contact_path, :class => "dropdown-toggle" %>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Portfolio 2 Columns</a></li>
-                                    <li><a href="#">Portfolio 3 Columns</a></li>
-                                    <li><a href="#">Portfolio 4 Columns</a></li>
-                                    <li><a href="#">Portfolio Item</a></li>
-                                </ul>
+                                <%=link_to "Contato", information_contacts_path, :class => "dropdown-toggle" %>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fale Conosco</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Blog Layout 1</a></li>
-                                    <li><a href="#">Blog Layout 2</a></li>
-                                    <li><a href="#">Blog Item</a></li>
-                                </ul>
+                                <%=link_to "Fale Conosco", new_contact_path, :class => "dropdown-toggle" %>
                             </li>
                         </ul>
                         <!-- /.nav -->

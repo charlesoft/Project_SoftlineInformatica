@@ -1,4 +1,5 @@
 
+<% if user_signed_in? == false %>
         <section class="page-title-wrapper">
             <div class="container">
                 <div class="row">
@@ -19,7 +20,6 @@
             </div>
             <!-- /.container -->
         </section>
-
 
 <section class="colored-wrapper">
 	<div class="container">
@@ -55,6 +55,7 @@
 						</a>
 					</div>
 				</div>
+				<% end %>
 				<% if @companies.any? %>
 				<div class="col-md-6 wrapper-1">
 					<% @companies.each do |company| %>

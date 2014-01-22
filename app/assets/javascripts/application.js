@@ -10,6 +10,8 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require jquery
+//= require jquery_ujs
 //= require bootstrap.min.js
 //= require easing.js
 //= require jflickrfeed.min.js
@@ -21,6 +23,7 @@
 //= require jquery.prettyPhoto.js
 //= require jquery.themepunch.revolution.min.js
 //= require jquery.ui.totop.min.js
+//= require jquery.maskedinput.js
 
 function getCityesByStateId(state_id) {
 	$.ajax("/contacts/get_cities_by_state_id/"+state_id, function(j) {
