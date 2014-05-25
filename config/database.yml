@@ -4,7 +4,7 @@ development:
   database: development_softline
   pool: 5
   username: charles
-  password: 123
+  password: gesthos4620
 
 test:
   adapter: postgresql
@@ -12,7 +12,7 @@ test:
   database: test_softline
   pool: 5
   username: charles
-  password: 123
+  password: gesthos4620
 
 production:
   adapter: postgresql
@@ -20,4 +20,4 @@ production:
   database: production_softline
   pool: 5
   username: charles
-  password: 123
+  password: gesthos4620

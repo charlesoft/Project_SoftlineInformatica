@@ -1,11 +1,10 @@
   ProjectSoftlineinformatica::Application.routes.draw do
-  devise_for :users, :path => "auth", 
+  devise_for :users,:path => "auth", 
   :path_names =>{:sign_in => 'login', 
     :sign_out => 'logout', 
     :password => 'secret', 
     :confirmation => 'verification',
-    :unlock => 'unblock', 
-    :registration => 'register'},
+    :unlock => 'unblock'}, 
 
     :controllers => {:sessions => "sessions"} do
       get 'auth/logout' => 'sessions#destroy', :as => :destroy_user_session

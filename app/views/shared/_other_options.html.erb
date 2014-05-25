@@ -5,16 +5,16 @@
             <div class="col-md-4 ">
                 <div class="service">
                     <span class="service-icon">
-                        <%=fa_icon "laptop" %>
+                        <%=link_to (fa_icon "laptop"), companies_path, :style=>'color:#FFFFFF;' %>
                     </span>
                     <h4>A Empresa</h4>
-                    <p>A Softline...</p>
+                    <p>A Softline Informática oferece um sistema de gestão hospitalar(Gesthos), com o objetivo ...</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service">
                     <span class="service-icon">
-                        <%=fa_icon "gear" %>
+                        <%=link_to (fa_icon "gear"), index_soluctions_path, :style=>'color:#FFFFFF;' %>
                     </span>
                     <h4>Serviços</h4>
                     <p>A Softline provem...</p>
@@ -23,7 +23,7 @@
             <div class="col-md-4">
                 <div class="service">
                     <span class="service-icon">
-                        <%=fa_icon "envelope-o" %>
+                        <%= link_to (fa_icon "envelope-o"), new_contact_path,:style=>'color:#FFFFFF;' %>
                     </span>
                     <h4>Fale Conosco</h4>
                     <p>Procure entrar em...</p>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1108728883">
+    <data-source source="LOCAL" name="Rails Project_SoftlineInformatica: development" uuid="4bfd261d-3551-4867-a751-fbf46dcd7788">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:development_softline</jdbc-url>
+      <user-name>charles</user-name>
+      <user-password>df9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Project_SoftlineInformatica: test" uuid="d8f465d7-ba1c-4325-aa41-3e6c086ba721">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:test_softline</jdbc-url>
+      <user-name>charles</user-name>
+      <user-password>df9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Project_SoftlineInformatica: production" uuid="4618abb4-1e40-4b48-abbb-3a49cef60b14">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:production_softline</jdbc-url>
+      <user-name>charles</user-name>
+      <user-password>df9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
