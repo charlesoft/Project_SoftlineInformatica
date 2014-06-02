@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 class ContactsController < ApplicationController
 
 	before_filter :authenticate_user!, :except => [:new, :create, :get_states, :information]
-
+	
 	def index
 		@contacts = Contact.all
 	end

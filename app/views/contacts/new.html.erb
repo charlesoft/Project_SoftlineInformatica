@@ -1,36 +1,30 @@
-<style type="text/css">
-
-</style>
-
 <div class="container">
 
 <div id="notice"><%=notice %></div>
 
-	<h3>Contato</h3>
+	<h3>Fale Conosco</h3></br>
 
 	<%= form_for(@contact) do |f| %>
 
-	<div class="field">
-		<%= f.label :name, "Nome"%>
-		<%= f.text_field :name, :class => "form-control"%>
+	<div class="col-md-4">
+		<%= f.text_field :name, :class => "form-control", :placeholder => "Nome"%>
 	</div>
 
-	<div class="field">
-		<%= f.label :function, "Cargo"%>
-		<%= f.text_field :function, :class => "form-control" %>
+	<div class="col-md-4">
+		<%= f.text_field :function, :class => "form-control", :placeholder => "Cargo" %>
 	</div>
 
-	<div class="field">
-		<%= f.label :state, "Estado" %>
-		<%= select :state, :state_id, State.all.collect { |s| [s.name, s.id] }, {include_blank: true}, :class => "form-control"%>
-	</div>
 
-	<div class="field">
-		<%=f.label :city, "Cidades" %>
+	<div class="col-md-4">
+		<%= select :state, :state_id, State.all.collect { |s| [s.name, s.id] }, {include_blank: true}, :class => "form-control" %>
+	</div></br>
+
+
+	<div class="col-md-4"></br>
 		<div id="box-city">
 			<select class="form-control"></select>
 		</div>
-	</div>
+	</div></br>
 
 	<script type="text/javascript">
 	$(function(){
@@ -46,28 +40,27 @@
 	</script>
 
 
-	<div class="field">
-		<%= f.label :phone_number, "Telefone" %>
-		<%= f.telephone_field :phone_number, :class => "form-control" %>
-	</div>
+	<div class="col-md-4"></br>
+		
+		<%= f.telephone_field :phone_number, :class => "form-control", :placeholder => "Telefone", :mask => "(99) 9999-9999" %>
+	</div></br>
 
 
 </script>
 
-<div class="field">
-	<%= f.label :email, "E-mail"%>
-	<%= f.email_field :email, :class => "form-control" %>
-</div>
+<div class="col-md-4">
 
-<div class="field">
-	<%= f.label :menssage, "Mensagem" %>
-	<%= f.text_area :menssage, :class => "form-control", :rows => 10%>
+	<%= f.email_field :email, :class => "form-control", :placeholder => "E-mail" %>
+</div></br>
+
+<div class="field"></br></br>
+	<%= f.text_area :menssage, :class => "form-control", :rows => 10, :placeholder => "Mensagem"%>
 </div>
 
 </br>
 <div class="actions">
 	<%= f.submit "Enviar", :class => "btn btn-primary" %>
-	<%= link_to "Voltar", :class => "btn" %>
+	<%= link_to "Voltar", root_path, :class => "btn" %>
 </div>
 <% end %>
 </div>

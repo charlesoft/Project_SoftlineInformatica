@@ -14,7 +14,11 @@ class SoluctionsController < ApplicationController
 
 	def create
 		@soluction = Soluction.new(params[:soluction])
-		flash[:notice] = @soluction.save ? "Serviço inserido com sucesso!" : "Falha ao inserir o serviço!"
+		if @soluction.save
+			flash[:notice] = "Serviço inserido com sucesso!"
+		else
+			flash[:notice] = "Falha ao cadastrar o serviço!"
+		end
 	end
 
 	def create_soluction
@@ -34,7 +38,11 @@ class SoluctionsController < ApplicationController
 
 	def update
 		@soluction = Soluction.find(params[:id])
-		flash[:notice] = @soluction.update_attributes ? "Serviço atualizado com sucesso!" : "Falha na atualização do serviço!"
+		if @soluction.update_attributes(params[:soluction])
+			flash[:notice] = "Serviço atualizado com sucesso!"
+		else
+			flash[:notice] = "Serviço não foi atualizado, ocorreu um erro inesperado!"
+		end
 	end
 
 	def destroy

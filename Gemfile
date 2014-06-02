@@ -37,6 +37,9 @@ group :test do
 	gem 'factory_girl_rails',"~> 4.0"
 end
 
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+#gem 'spring',        group: :development
+
 gem 'therubyracer', :platforms => :ruby
 
 gem 'jquery-rails'
@@ -48,6 +51,12 @@ gem 'devise'
 gem 'mailcatcher'
 
 gem 'mask_validator', '0.2.1'
+
+#Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+#gem 'jbuilder', '~> 2.0'
+
+#This is a json implementation
+#gem 'json', '~> 1.8.1'
 
 #option
 #gem 'brazilian-rails'
