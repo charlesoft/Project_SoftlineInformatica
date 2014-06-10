@@ -1,6 +1,7 @@
 <div class="container">
 
-<div id="notice"><%=notice %></div>
+
+	<div class="alert"></div>
 
 	<h3>Fale Conosco</h3></br>
 
@@ -11,7 +12,7 @@
 	</div>
 
 	<div class="col-md-4">
-		<%= f.text_field :function, :class => "form-control", :placeholder => "Cargo" %>
+		<%= f.text_field :company, :class => "form-control", :placeholder => "Empresa" %>
 	</div>
 
 
@@ -20,11 +21,9 @@
 	</div></br>
 
 
-	<div class="col-md-4"></br>
-		<div id="box-city">
-			<select class="form-control"></select>
-		</div>
-	</div></br>
+		<div id="box-city" class="col-md-4"></br>
+			<select id="selector" class="form-control"></select>
+		</div></br>
 
 	<script type="text/javascript">
 	$(function(){
@@ -42,7 +41,7 @@
 
 	<div class="col-md-4"></br>
 		
-		<%= f.telephone_field :phone_number, :class => "form-control", :placeholder => "Telefone", :mask => "(99) 9999-9999" %>
+		<%= f.telephone_field :phone_number, :class => "form-control", :placeholder => "Telefone (999) 9999-9999" %>
 	</div></br>
 
 

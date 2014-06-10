@@ -5,7 +5,6 @@ class Contact < ActiveRecord::Base
 
 	#Validates
 	validates :name, :presence => true, :allow_blank => false
-	validates :function, :presence => true, :allow_blank => false
 	validates :state, :presence => true
 	validates :city, :presence => true
 	validates :phone_number, :presence => true, :mask => "(99) 9999-9999"

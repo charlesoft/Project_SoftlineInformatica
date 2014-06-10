@@ -14,12 +14,12 @@ class ContactsController < ApplicationController
 	def create
 		@contact = Contact.new(params[:contact])
 		if @contact.save
-			flash[:notice]= "Mensagem enviada com sucesso!"
+			flash[:alert]= "Mensagem enviada com sucesso!"
 			render :action => :new
 		else
-			flash[:notice]="Verifique se inseriu os campos obrigatorios"
-			
-		end
+			flash[:alert]="Verifique se inseriu os campos obrigatorios"
+			render :action => :new
+		end	
 	end
 
 	def show 
@@ -28,6 +28,9 @@ class ContactsController < ApplicationController
 
 	def get_states
 		@state = State.find(params[:id])
+	end
+
+	def information
 	end
 
 end

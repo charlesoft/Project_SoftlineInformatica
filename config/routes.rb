@@ -68,13 +68,13 @@
     resources :soluctions, :except => [:index,:new]
   end
 
+  resources :contacts, :except => [:edit, :update]
+
   match 'new_soluction' => 'soluctions#new', :via => :get, :as => :new_soluction
   match 'create_soluction' => 'soluctions#create_soluction', :via => :post, :as =>  :create_soluction
   match 'index_soluctions' => 'soluctions#index_soluctions', :via => :get, :as => :index_soluctions
-  match 'new_contact' => 'contacts#new', :via => :get, :as => :new_contact
-  match 'index_contacts' => 'contacts#index', :via => :get, :as => :contacts
   match 'contacts/get_states/:id' => 'contacts#get_states', :via => :get
-  match 'information_contacts' => 'contacts#information', :as => :information_contacts
+  match 'information_contacts' => 'contacts#information',:via => :get, :as => :information_contacts
 
   # See how all your routes lay out with "rake routes"
 

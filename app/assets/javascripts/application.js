@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min.js
+//= require bootstrap.js
 //= require easing.js
 //= require jflickrfeed.min.js
 //= require jquery-2.0.3.min.js
