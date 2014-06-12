@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">Softline Informática</a>
+      <%=link_to "Softline Informática Ltda", root_path, :class => "brand" %>
       <div class="nav-collapse collapse navbar-inverse-collapse">
         <ul class="nav">
           <li class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">A Empresa <b class="caret"></b></a>
@@ -16,7 +16,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Soluções <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="#"><%= link_to "Inserir", new_soluction_path  %></a></li>
               <li><a href="#"><%= link_to "Visualizar/Alterar", companies_path %></a></li>
@@ -35,11 +35,9 @@
                 <% end %>
               </li>
               <li><a href="#"><%= link_to "Contatos", contacts_path %></a></li>
-              <li><a href="#"><%= link_to "Registrar", new_user_registration_path %></a></li>
               <li><a href="#"><%= link_to "Sair", destroy_user_session_path, :method => :delete %></a></li>
-              <li><a href="#"><%= link_to "Criar Usuário", new_user_path %></a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Esse link não faz nada</a></li>
             </ul>
           </li>
         </ul>

@@ -12,14 +12,16 @@ class ContactsController < ApplicationController
 	end
 
 	def create
+		params[:contact][:state] = params[:state][:state_id]
+		params[:contact][:city] = params[:city][:city_id]
 		@contact = Contact.new(params[:contact])
 		if @contact.save
-			flash[:alert]= "Mensagem enviada com sucesso!"
-			render :action => :new
+			flash[:notice]= "Mensagem enviada com sucesso"
 		else
-			flash[:alert]="Verifique se inseriu os campos obrigatorios"
-			render :action => :new
+			flash[:alert]= "Verifique se preencheu todos os campos corretamente"
 		end	
+
+		render :action => :new
 	end
 
 	def show 

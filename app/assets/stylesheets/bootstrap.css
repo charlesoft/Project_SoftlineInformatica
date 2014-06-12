@@ -175,8 +175,8 @@ textarea {
   vertical-align: top;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  max-width: 100%;
+  background-color: transparent;
 }
 *,
 *:before,
@@ -335,7 +335,7 @@ hr {
   }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important;
+    border: 1px solid #ddd;
   }
 }
 p {
@@ -1285,6 +1285,8 @@ pre code {
 table {
   max-width: 100%;
   background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 th {
   text-align: left;
@@ -1332,6 +1334,12 @@ th {
 }
 .table-bordered {
   border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -1339,7 +1347,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {

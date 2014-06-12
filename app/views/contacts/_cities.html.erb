@@ -1,1 +1,2 @@
-<%= select("city", "city_id", cities.all.collect {|p| [ p.name, p.id ] }, :class => "form-control") %>
+</br>
+<%= select :city, :city_id, cities.all.collect {|c| [c.name, c.id]}, {:include_blank => "Cidade"}, :class => "form-control" %>

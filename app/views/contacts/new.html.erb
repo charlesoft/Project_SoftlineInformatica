@@ -1,7 +1,13 @@
 <div class="container">
 
+</br>
+	<% if alert %>
+		<div class="alert alert-warning"><%= alert %></div>
+	<% end %>
 
-	<div class="alert"></div>
+	<% if notice %>
+		<div class="alert alert-success"><%= notice %></div>
+	<% end  %>
 
 	<h3>Fale Conosco</h3></br>
 
@@ -17,7 +23,7 @@
 
 
 	<div class="col-md-4">
-		<%= select :state, :state_id, State.all.collect { |s| [s.name, s.id] }, {include_blank: true}, :class => "form-control" %>
+		<%= select :state, :state_id, State.all.collect {|s| [s.name, s.id]}, {:include_blank => 'Estado'}, :class => "form-control" %>
 	</div></br>
 
 
@@ -53,12 +59,12 @@
 </div></br>
 
 <div class="field"></br></br>
-	<%= f.text_area :menssage, :class => "form-control", :rows => 10, :placeholder => "Mensagem"%>
+	<%= f.text_area :message, :class => "form-control", :rows => 10, :placeholder => "Mensagem"%>
 </div>
 
 </br>
 <div class="actions">
-	<%= f.submit "Enviar", :class => "btn btn-primary" %>
+	<%= f.submit "Enviar" , :class => "btn btn-primary" %>
 	<%= link_to "Voltar", root_path, :class => "btn" %>
 </div>
 <% end %>
