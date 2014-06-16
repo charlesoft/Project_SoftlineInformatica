@@ -8,6 +8,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require 'net/http'
+require 'net/https' # for ruby 1.8.7
 require 'json'
 
 module BRPopulate
