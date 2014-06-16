@@ -9,8 +9,14 @@ gem 'rails', '3.2.13'
 #group :development, :test do
 #	gem 'mysql2'
 #end
-gem 'sqlite3'
-gem 'pg'
+
+# group :development do
+# 	gem 'sqlite3', '~> 1.3.8'
+# end
+
+group :production, :development, :test do
+	gem 'pg'
+end
 
 gem 'heroku'
 
