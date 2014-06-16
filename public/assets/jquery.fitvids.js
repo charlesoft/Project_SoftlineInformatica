@@ -1,0 +1,10 @@
+/*!
+* FitVids 1.0.3
+*
+* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+* Date: Thu Sept 01 18:00:00 2011 -0500
+*/
+!function(t){"use strict";t.fn.fitVids=function(e){var n={customSelector:null};if(!document.getElementById("fit-vids-style")){var i=document.createElement("div"),o=document.getElementsByTagName("base")[0]||document.getElementsByTagName("script")[0],s="&shy;<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>";i.className="fit-vids-style",i.id="fit-vids-style",i.style.display="none",i.innerHTML=s,o.parentNode.insertBefore(i,o)}return e&&t.extend(n,e),this.each(function(){var e=["iframe[src*='player.vimeo.com']","iframe[src*='youtube.com']","iframe[src*='youtube-nocookie.com']","iframe[src*='kickstarter.com'][src*='video.html']","object","embed"];n.customSelector&&e.push(n.customSelector);var i=t(this).find(e.join(","));i=i.not("object object"),i.each(function(){var e=t(this);if(!("embed"===this.tagName.toLowerCase()&&e.parent("object").length||e.parent(".fluid-width-video-wrapper").length)){var n="object"===this.tagName.toLowerCase()||e.attr("height")&&!isNaN(parseInt(e.attr("height"),10))?parseInt(e.attr("height"),10):e.height(),i=isNaN(parseInt(e.attr("width"),10))?e.width():parseInt(e.attr("width"),10),o=n/i;if(!e.attr("id")){var s="fitvid"+Math.floor(999999*Math.random());e.attr("id",s)}e.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",100*o+"%"),e.removeAttr("height").removeAttr("width")}})})}}(window.jQuery||window.Zepto);
