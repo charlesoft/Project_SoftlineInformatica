@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '1.9.3'
 # See https://devcenter.heroku.com/articles/ruby-versions for more information.
 
 
