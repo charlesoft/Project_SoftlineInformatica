@@ -39,7 +39,9 @@ if user_signed_in? %>
 	<%=render :partial => 'soluctions/form', :locals =>{:soluction => Soluction.new, :company => @company} %>
 </div>
 <% end %>
-
+<hr>
+</br>
+<h2>Serviços</h2>
 <div id="lista_solucao">
 	<%= render :partial => 'soluctions/index', :locals => {:soluctions => @company.soluctions} %>
 </div>

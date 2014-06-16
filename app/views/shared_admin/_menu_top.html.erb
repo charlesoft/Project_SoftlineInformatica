@@ -29,7 +29,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conta <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><% if user_signed_in? %>
-                <a href="#"><%= link_to current_user.email, edit_user_registration_path %></a>
+                <a href="#"><%= link_to current_user.email, current_user %></a>
                 <% else %>
                 <%= link_to "login", new_user_session_path %>
                 <% end %>
