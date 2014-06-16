@@ -8,7 +8,7 @@ class CreateTableContacts < ActiveRecord::Migration
 			t.column :phone_number, :string, :null => false
 			t.column :company, :string, :null => false
 			t.column :email, :string, :null => false
-			t.column :menssage, :text, :null => false
+			t.column :message, :text, :null => false
 			t.timestamps
 		end
 	end
