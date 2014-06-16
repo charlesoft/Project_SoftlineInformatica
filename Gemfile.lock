@@ -221,6 +221,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   shoulda
   simplecov
-  sqlite3
   therubyracer
   uglifier (>= 1.0.3)
