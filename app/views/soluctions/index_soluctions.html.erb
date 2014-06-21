@@ -22,22 +22,25 @@
 </section>
 <% end %>
 
-    <div class="container">
-        <hr>
-        <% if @soluctions.any? %>
-        <% @soluctions.each do |soluction| %>
-           <table class="table table-bordered">
-              <tr>
-                 <td>
-                    <h3><%= soluction.title %></h3>
-                    <p><b><%= soluction.description %></b></p>
-                </td>
-            </tr>
-        </table>
-        <% end %>
-        <% else %>
-        <div class="alert">
-          Não há serviços cadastradas!
-      </div>
+<div class="container">
+    <hr>
+    <% if @soluctions.any? %>
+    <% @soluctions.each do |soluction| %>
+    <% if soluction.title == "Suporte Técnico" %>
+    <hr>
     <% end %>
+    <table class="table table-bordered">
+      <tr>
+         <td>
+            <h3><%= soluction.title %></h3>
+            <p><b><%= soluction.description %></b></p>
+        </td>
+    </tr>
+</table>
+<% end %>
+<% else %>
+<div class="alert">
+  Não há serviços cadastradas!
+</div>
+<% end %>
 </div>

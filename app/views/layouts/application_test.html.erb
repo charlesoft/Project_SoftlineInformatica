@@ -10,6 +10,14 @@
 <body>
 	
 	<%= render :partial => 'shared_admin/menu_top' %>
+
+	<script type="text/javascript">
+	jQuery(function($) {
+		
+		$('.dropdown-toggle').dropdown()
+		
+	});
+	</script>
 	<div class="container">
 
 		<%= yield %>
